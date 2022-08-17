@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;700&display=swap');
+
+body {
+  background-color: #EAE8F4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Nanum Myeongjo';
+  min-height: 80vh;
+  margin: 0;
+  padding: 0;
+}
+/* 650px 이상일 때 */
+@media (min-width:650px) {
+  .App {
+    width:550px;
+  }
+}
+/* 650px 이하일 때 현재 화면의 90%를 차지하게 하겠다 */
+@media (max-width:650px) {
+  .App {
+    width:90vw;
+  }
+}
+
+.App {
+  min-height: 80vh;
+  background-color: white;
+  box-shadow: rgba(100,100,111,0.2) 0px 7px 29px 0px;
+}
+
+/* MyButton */
+.MyButton {
+  cursor: pointer;
+  border: none;
+  padding: 10px 30px;
+
+  font-size:  15px;
+  white-space: nowrap; /*버튼안글자가 두줄이 되지않도록*/
+  font-family: 'Nanum Myeongjo';
+}
+
+.MyButton_default {
+  color:black;
+  background-color: white;
+}
+.MyButton_cancle {
+  background-color:#F2F2F2;
+  color:black;
+}
+.MyButton_post {
+  background-color: #F0A1A8;
+  color:black;
+}
+.MyButton_newPost {
+  background-color:#4ED0B1;
+  color:white;
+}
+.MyButton_read {
+  background-color:#A581CB;
+  color:white;
+}
+/* HEADER */
+header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e2e2e2;
+}
+header > div {
+  display: flex; /* 본인 태그 내에서 중앙에 오게함*/
+}
+header .head_text {
+  width: 50%; /* 최소 50% 차지함*/
+  justify-content: center; /* 본인 태그 내에서 중앙에 오게함*/
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing:2px;
+}
+
+header .head_btn_left {
+  width:25%;
+  justify-content: start;
+  padding-left: 10px;
+}
+header .head_btn_right {
+  width:25%;
+  justify-content: end;
+  padding-right: 20px;
+}
+
+/* DiaryItem */
+.Diaryitem {
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  border-bottom: 1px solid #e2e2e2;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Diaryitem .tag_img_wrapper {
+  cursor: pointer;
+  padding-top: 10px;
+  min-width:80px; /*화면이 줄어든다해서 너무 줄어들지 않게*/
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.Diaryitem .info_wrapper {
+  flex-grow:1; /*가운데로 쫙늘려준다*/
+  cursor: pointer;
+  /* margin-left: 5px; */
+}
+.Diaryitem .diary_date {
+  font-size: 15px;
+  color:rgb(170, 167, 167);
+}
+.Diaryitem .diary_title {
+  font-size: 18px;
+  /* font-weight: 550; */
+  margin-bottom: 5px;
+}
+
+.Diaryitem .btn-wrapper {
+  min-width: 70px;
+}
+
+.Diaryitem .btn-wrapper > button {
+  font-size: 13px;
+  color:rgb(128, 125, 125);
+}
+
+/* DiaryEditor */
+.diaryeditor section {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+.diaryeditor section:nth-of-type(1) {
+  display: flex;
+  justify-content: end;
+}
+
+.diaryeditor .tag_list_wrapper {
+  display: flex;
+}
+.diaryeditor .input_date {
+  border:none;
+  margin-right: 10px;
+}
+.diaryeditor section:nth-of-type(2){
+  display: flex;
+  flex-direction: column;
+}
+
+section:nth-of-type(2) input {
+  width:480px;
+  padding: 10px;
+  outline: none;
+  border: 1px solid #B3B3B3;
+  margin-bottom: 10px;
+}
+section:nth-of-type(2) textarea {
+  width:480px;
+  height: 600px;
+  padding: 10px;
+  resize: none;
+  outline: none;
+  border: 1px solid #B3B3B3;
+}
+
+/* Home */
+.Home {
+  display: flex;
+  flex-direction: column;
+}
+.Home_title {
+  padding-left:30px ;
+  padding-top:30px ;
+  height: 300px;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+.Home_btn_wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  left: 200px;
+  position: relative;
+}
+.Home_btn_wrapper button {
+  letter-spacing: 4px;
+  height: 40px;
+}
+
+/* DiaryDetail */
+.DiaryDetail_infowrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:20px;
+}
+.DiaryDetail_infowrapper >img {
+  width: 20px;
+}
+.DiaryDetail_contentwrapper{
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 480px;
+}
+.DiaryDetail_content {
+  font-size: 15px;
+}
