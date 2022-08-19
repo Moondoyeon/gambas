@@ -12,7 +12,7 @@ import Navbar from './components/Navbar';
 function App() {
   const [lists, setLists] =useState([]);
   useEffect(() => {
-    axios.get('http://localhost:3001/lists')
+    axios.get('http://gambas-emotion-basket.herokuapp.com/api/lists')
     .then((res) => {
       setLists(res.data);
     })

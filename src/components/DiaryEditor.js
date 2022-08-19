@@ -27,12 +27,12 @@ const DiaryEditor = ({originData, isEdit}) => {
       content,
     };
     if(isEdit && e.type==='submit') {
-      axios.patch(`http://localhost:3001/lists/${originData.id}`, editPost)
+      axios.patch(`http://gambas-emotion-basket.herokuapp.com/api/lists/${originData.id}`, editPost)
       .then((msg) => {
         console.log(msg);
       });
     } else {
-      axios.post(`http://localhost:3001/lists`, newPost)
+      axios.post(`http://gambas-emotion-basket.herokuapp.com/api/lists`, newPost)
       .then((msg) => {
         console.log(msg);
       })

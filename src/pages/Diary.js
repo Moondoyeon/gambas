@@ -10,7 +10,7 @@ const Diary = () => {
   const navigate = useNavigate();
   const {id} = useParams();
   useEffect(() => {
-    axios.get(`http://localhost:3001/lists/${id}`)
+    axios.get(`http://gambas-emotion-basket.herokuapp.com/api/lists/${id}`)
     .then((res) => {
       setData(res.data);
     })
