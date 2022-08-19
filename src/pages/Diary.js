@@ -9,14 +9,10 @@ const Diary = () => {
   const [data, setData] =useState([]);
   const navigate = useNavigate();
   const {id} = useParams();
-  console.log(id);
   useEffect(() => {
     axios.get(`http://localhost:3001/lists/${id}`)
     .then((res) => {
       setData(res.data);
-    })
-    .catch((err) => {
-      console.log(err);
     })
   },[id])
 

@@ -7,6 +7,7 @@ import New from './pages/New';
 import Edit from './pages/Edit';
 import Diary from './pages/Diary';
 import List from  './pages/List';
+import Navbar from './components/Navbar';
 
 function App() {
   const [lists, setLists] =useState([]);
@@ -22,9 +23,8 @@ function App() {
   
 
   return (
-    <BrowserRouter>
-        <h3>감정을 담으세요, 감바스</h3>
         <div className="App">
+        <Navbar/>
           <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/list' element={<List lists={lists} />}/>
@@ -33,7 +33,6 @@ function App() {
             <Route path='/diary/:id' element={<Diary/>}/>
           </Routes>
         </div>
-      </BrowserRouter>
   );
 }
 

@@ -6,7 +6,6 @@ body {
   justify-content: center;
   align-items: center;
   font-family: 'Nanum Myeongjo';
-  min-height: 80vh;
   margin: 0;
   padding: 0;
 }
@@ -22,11 +21,32 @@ body {
     width:90vw;
   }
 }
-
+/* navbar */
+.navbar {
+  background-color: #EAE8F4;
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.navbar > a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+.navbar div {
+  margin-right: 40px;
+}
 .App {
-  min-height: 80vh;
+  height: 80vh;
   background-color: white;
   box-shadow: rgba(100,100,111,0.2) 0px 7px 29px 0px;
+  margin-top: 150px;
+  overflow:auto;
 }
 
 /* MyButton */
@@ -34,12 +54,10 @@ body {
   cursor: pointer;
   border: none;
   padding: 10px 30px;
-
   font-size:  15px;
   white-space: nowrap; /*버튼안글자가 두줄이 되지않도록*/
   font-family: 'Nanum Myeongjo';
 }
-
 .MyButton_default {
   color:black;
   background-color: white;
@@ -79,7 +97,6 @@ header .head_text {
   font-weight: 600;
   letter-spacing:2px;
 }
-
 header .head_btn_left {
   width:25%;
   justify-content: start;
@@ -95,12 +112,10 @@ header .head_btn_right {
 .Diaryitem {
   padding-top: 15px;
   padding-bottom: 15px;
-
   border-bottom: 1px solid #e2e2e2;
   display: flex;
   justify-content: space-between;
 }
-
 .Diaryitem .tag_img_wrapper {
   cursor: pointer;
   padding-top: 10px;
@@ -108,13 +123,10 @@ header .head_btn_right {
   height: 20px;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
 }
-
 .Diaryitem .info_wrapper {
   flex-grow:1; /*가운데로 쫙늘려준다*/
   cursor: pointer;
-  /* margin-left: 5px; */
 }
 .Diaryitem .diary_date {
   font-size: 15px;
@@ -122,14 +134,11 @@ header .head_btn_right {
 }
 .Diaryitem .diary_title {
   font-size: 18px;
-  /* font-weight: 550; */
   margin-bottom: 5px;
 }
-
 .Diaryitem .btn-wrapper {
   min-width: 70px;
 }
-
 .Diaryitem .btn-wrapper > button {
   font-size: 13px;
   color:rgb(128, 125, 125);
@@ -145,29 +154,28 @@ header .head_btn_right {
   display: flex;
   justify-content: end;
 }
-
 .diaryeditor .tag_list_wrapper {
   display: flex;
 }
 .diaryeditor .input_date {
   border:none;
   margin-right: 10px;
+  font-family: 'Nanum Myeongjo';
 }
 .diaryeditor section:nth-of-type(2){
   display: flex;
   flex-direction: column;
 }
-
 section:nth-of-type(2) input {
-  width:480px;
+  width:490px;
   padding: 10px;
   outline: none;
   border: 1px solid #B3B3B3;
   margin-bottom: 10px;
 }
 section:nth-of-type(2) textarea {
-  width:480px;
-  height: 600px;
+  width:490px;
+  height: 50vh;
   padding: 10px;
   resize: none;
   outline: none;
@@ -178,24 +186,31 @@ section:nth-of-type(2) textarea {
 .Home {
   display: flex;
   flex-direction: column;
+  background: linear-gradient(0deg, #FFC0CB 50%, white 50%);
+  height:100%;
 }
-.Home_title {
+.Home_top {
   padding-left:30px ;
   padding-top:30px ;
   height: 300px;
   font-size: 20px;
   letter-spacing: 3px;
+  height: 388px;
+}
+.Home_bottom {
+  display: flex;
+  justify-content: center;
+  
 }
 .Home_btn_wrapper {
   display: flex;
   flex-direction: column;
   width: 30%;
-  left: 200px;
-  position: relative;
 }
 .Home_btn_wrapper button {
   letter-spacing: 4px;
   height: 40px;
+  font-size: 1rem;
 }
 
 /* DiaryDetail */

@@ -2,16 +2,16 @@
   "lists": [
     {
       "id": 1,
-      "date": "2022-08-16",
+      "date": "2022-08-19",
       "title": "인생이 내 맘대로 되나요",
-      "content": "안되지요. 너도나도 인생 1회차인데 모두가 처음인데, 모두가 어렵겠지. 언제쯤 행복하다고 말할 수 있을까",
+      "content": "안되지요. 너도나도 인생 1회차인데 모두가 처음인데, 모두가 어렵겠지. 언제쯤 행복하다고 말할 수 있을까?",
       "tag": 1
     },
     {
       "id": 2,
-      "date": "2022-08-17",
+      "date": "2022-08-19",
       "title": "이 날은 행복했으면 좋겠어",
-      "content": "ld={<MyButton text={'뒤로가기'} onClick={() => navigate(-1)}/>}\n        rightChild={<MyButton text={'수정'} onClick={()=> navigate(`/edit/${id}`)}/>}\n        />\n      <div className=\"DiaryDetail_infowrapper\">\n        <img src={process.env.PUBLIC_URL + `/assets/tag${data.tag}.png`}/>\n        <span>{data.date}</span>\n      </div>\n      <div className=\"DiaryDetail_contentwrapper\">\n        <div className=\"DiaryDetail_content\">{",
+      "content": "정말로",
       "tag": 2
     },
     {

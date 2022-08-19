@@ -29,9 +29,6 @@ const Edit = ({lists}) => {
     .then((res) => {
       console.log('삭제');
     })
-    .catch((err) => {
-      console.log(err);
-    })
   }
   return (
     <div>

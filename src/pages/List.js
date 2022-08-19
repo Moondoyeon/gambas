@@ -11,9 +11,9 @@ const List = ({lists}) => {
         rightChild={<MyButton text={'감정쓰기'} type={'newPost'} onClick={() => navigate('/new')}/>}
         leftChild={<MyButton text={'뒤로가기'} onClick={() => navigate(-1)}/>}
       />
-      <DiaryList lists={lists} />
+      <DiaryList lists={lists}/>
     </div>
   );
-};
+}
 
 export default List;

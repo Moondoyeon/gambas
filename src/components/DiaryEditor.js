@@ -15,12 +15,12 @@ const DiaryEditor = ({originData, isEdit}) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     navigate('/list');
-    let editPost = {
+    const editPost = {
       date,
       title,
       content,
     };
-    let newPost = {
+    const newPost = {
       date,
       "tag":Math.floor(Math.random() * 5),
       title,
@@ -28,27 +28,20 @@ const DiaryEditor = ({originData, isEdit}) => {
     };
     if(isEdit && e.type==='submit') {
       axios.patch(`http://localhost:3001/lists/${originData.id}`, editPost)
-      .then((res) => {
-        console.log(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      })
+      .then((msg) => {
+        console.log(msg);
+      });
     } else {
-
       axios.post(`http://localhost:3001/lists`, newPost)
-      .then((res) => {
-        console.log(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
+      .then((msg) => {
+        console.log(msg);
       })
     }
     window.location.reload(); //이거말고 다르게 할순없낭
   }
   useEffect(()=> {
     if(isEdit) {
-      // setDate(getStringDate(new Date(parseInt(originData.date))))
+      setDate(originData.date);
       setTitle(originData.title);
       setContent(originData.content);
     }
