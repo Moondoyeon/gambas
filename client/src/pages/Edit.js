@@ -21,11 +21,12 @@ const Edit = ({lists}) => {
         setOriginData(targetDiary);
       }
     }
-  },[id, lists])
+  },[id, lists]);
+
   const handleDeleteClick = () => {
     navigate('/list');
     window.location.reload();
-    axios.delete(`http://gambas-emotion-basket.herokuapp.com/api/lists/${originData.id}`)
+    axios.delete(`http://localhost:3001/lists/${originData.id}`)
     .then((res) => {
       console.log('삭제');
     })

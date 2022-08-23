@@ -21,18 +21,19 @@ const DiaryEditor = ({originData, isEdit}) => {
       content,
     };
     const newPost = {
+      id: Date.now,
       date,
       "tag":Math.floor(Math.random() * 5),
       title,
       content,
     };
     if(isEdit && e.type==='submit') {
-      axios.patch(`http://gambas-emotion-basket.herokuapp.com/api/lists/${originData.id}`, editPost)
+      axios.patch(`http://localhost:3001/lists/${originData.id}`, editPost)
       .then((msg) => {
         console.log(msg);
       });
     } else {
-      axios.post(`http://gambas-emotion-basket.herokuapp.com/api/lists`, newPost)
+      axios.post(`http://localhost:3001/lists`, newPost)
       .then((msg) => {
         console.log(msg);
       })
